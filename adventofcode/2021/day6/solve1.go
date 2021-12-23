@@ -10,19 +10,6 @@ import (
 	"strings"
 )
 
-func GetRes(x, st int) int {
-	tot := 1
-	if x <= st {
-		return tot
-	}
-
-	for i := x; i > 0; i -= 8 {
-		tot += GetRes(i, 8)
-	}
-
-	return tot
-}
-
 func main() {
 	fi, err := os.Open("data.txt")
 	if err != nil {
