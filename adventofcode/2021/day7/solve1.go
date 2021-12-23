@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-	. "fmt"
 	"io"
 	"os"
 	"sort"
@@ -29,7 +28,7 @@ func main() {
 	var s string
 
 	br := bufio.NewReader(fi)
-	_, c := Fscanln(br, &s)
+	_, c := fmt.Fscanln(br, &s)
 	if c == io.EOF {
 		return
 	}
